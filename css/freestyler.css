@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v1/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v1/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYMZg.ttf) format('truetype');
+}
+html,
+body {
+  scroll-snap-type: y mandatory;
+  height: 100%;
+}
+body {
+  font-family: Inter, sans-serif;
+  color: whitesmoke;
+  background: black;
+}
+section {
+  scroll-snap-align: top;
+  padding: 4rem;
+  min-height: 100vh;
+  font-size: 4vmax;
+  line-height: 1.4;
+  text-shadow: 1px 1px 0 black;
+}
+h2 {
+  display: inline;
+}
+.cursor {
+  display: inline-block;
+  animation: blink 600ms steps(2) infinite;
+}
+@keyframes blink {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: show;
+  }
+}
+.background-styling {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70vmax auto;
+  background-attachment: fixed;
+}
+.screen__inner {
+  max-width: 700px;
+}
+.screen-001 {
+  background-image: url('/img/257-flexi.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70vmax auto;
+  background-attachment: fixed;
+}
+.screen-002 {
+  color: black;
+  background: whitesmoke;
+  background-image: url('/img/257-booths.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70vmax auto;
+  background-attachment: fixed;
+}
+.screen-003 {
+  background-image: url('/img/257-cafe.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70vmax auto;
+  background-attachment: fixed;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: blue;
+  z-index: 666;
+  width: 420px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer a {
+  color: yellow;
+}
+footer a.selected {
+  pointer-events: none;
+  background: yellow;
+  color: blue;
+}

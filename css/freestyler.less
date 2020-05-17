@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@531&display=swap');
+
+@black: black;
+
+html,
+body {
+    scroll-snap-type: y mandatory;
+    height: 100%;
+    // overflow-y: scroll;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    color: whitesmoke;
+    background: @black;
+}
+
+section {
+    scroll-snap-align: top;
+    padding: 4rem;
+    min-height: 100vh;
+    font-size: 4vmax;
+    line-height: 1.4;
+    text-shadow: 1px 1px 0 black;
+}
+
+h2 {
+    display: inline;
+}
+
+.cursor {
+    display: inline-block;
+    animation: blink 600ms steps(2) infinite;
+}
+
+@keyframes blink {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: show;
+    }
+}
+
+.background-styling {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70vmax auto;
+    background-attachment: fixed;
+}
+
+.screen {
+    &__inner {
+        max-width: 700px;
+    }
+
+    &-001 {
+        background-image: url('/img/257-flexi.jpg');
+        .background-styling;
+    }
+
+    &-002 {
+        color: @black;
+        background: whitesmoke;
+        background-image: url('/img/257-booths.jpg');
+        .background-styling;
+    }
+
+    &-003 {
+        background-image: url('/img/257-cafe.jpg');
+        .background-styling;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: blue;
+    z-index: 666;
+    width: 420px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & a {
+        color: yellow;
+
+        &.selected {
+            pointer-events: none;
+            background: yellow;
+            color: blue;
+        }
+    }
+}
